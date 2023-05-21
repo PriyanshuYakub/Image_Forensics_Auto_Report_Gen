@@ -1,0 +1,11 @@
+fpdf==1.7.2
+matplotlib==3.7.1
+numpy==1.24.3
+opencv_python==4.7.0.72
+Pillow==9.5.0
+Pillow==9.5.0
+progressbar33==2.4
+PyExifTool==0.4.13
+python_docx==0.8.11
+skimage==0.0
+xgboost==1.7.5
