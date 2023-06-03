@@ -137,7 +137,23 @@ class ImageForgeryDetection:
     def export_document(self):
         self.pdf.output(self.image_path.split('.')[0] + '_report.pdf')
         self.bar.finish()
+        return self.image_path.split('.')[0] + '_report.pdf'
 
+def start_process(move_path,file_name,current_time):
+    initiaste_paths()
+
+
+    tool = ImageForgeryDetection(move_path, file_name, current_time)
+
+    
+    tool.get_clones()
+    tool.get_ela()
+
+    tool.get_bit_wise_planes_noise()
+    tool.get_median_noise()
+    tool.get_min_max_noise()
+    tool.get_exif()
+    return tool.export_document()
 
 if __name__ == '__main__':
     initiaste_paths()
